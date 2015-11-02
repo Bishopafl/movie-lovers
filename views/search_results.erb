@@ -1,0 +1,26 @@
+<head>
+  <title>Movie Lovers Ultimate Search</title>
+</head>
+<body>
+  <h1>The ultimate search for the movie lover in you!</h1>
+	<h2> Which movie was made in the 80's? </h2>
+
+<% @filtered_movies.each do | movie | %>
+ 	
+		<% if @correct_movie.year == movie.year %> 
+			<img onclick="alert('You got it right')" src="<%= movie.poster %>" height="300" width="300">
+		<% else %>
+			<img onclick="alert('You got it wrong')" src="<%= movie.poster %>" height="300" width="300">
+
+		<% end %>
+
+	<% end %>
+
+
+
+
+
+
+
+
+</body>
